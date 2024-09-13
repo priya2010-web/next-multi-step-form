@@ -39,7 +39,7 @@ function Layout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const [activeStep, setActiveStep] = useState(2);
+  const [activeStep, setActiveStep] = useState(0);
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",

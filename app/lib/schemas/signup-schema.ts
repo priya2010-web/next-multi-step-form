@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { HIGHEST_QUALIFICATIONS } from "./constants";
 
 export const basicDetailsSchema = z
   .object({
@@ -20,11 +21,7 @@ export const addressSchema = z.object({
   landmark: z.string().optional(),
 });
 
-export const highestQualification = z.enum([
-  "Post Graduate",
-  "Graduate",
-  "Diploma",
-]);
+export const highestQualification = z.enum(HIGHEST_QUALIFICATIONS);
 
 export const educationSchema = z.object({
   //section 3
