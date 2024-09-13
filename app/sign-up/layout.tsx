@@ -43,7 +43,7 @@ function Layout({
     formState: { isValid },
   } = methods;
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async () => {
     if (activeStep < SignupFormSchema.length - 1) {
       // If not on the last step, go to the next step
       setActiveStep((prevStep) => prevStep + 1);
@@ -89,7 +89,7 @@ function Layout({
     <Stack className="m-2">
       <Link href="/">Go to home</Link>
       <Stepper activeStep={activeStep}>
-        {signUpSteps.map((label, index) => {
+        {signUpSteps.map((label) => {
           const stepProps: { completed?: boolean } = {};
           const labelProps: {
             optional?: React.ReactNode;
