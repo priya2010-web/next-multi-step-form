@@ -20,9 +20,15 @@ export const addressSchema = z.object({
   landmark: z.string().optional(),
 });
 
+export const highestQualification = z.enum([
+  "Post Graduate",
+  "Graduate",
+  "Diploma",
+]);
+
 export const educationSchema = z.object({
   //section 3
-  highestQualification: z.string().max(5),
+  highestQualification: highestQualification,
   cgpa: z.string().refine((val) => !Number.isNaN(parseFloat(val)), {
     message: "Expected number, received a string",
   }),

@@ -1,13 +1,17 @@
 "use client";
 import TextField from "@/components/TextField";
-import { Stack } from "@mui/material";
+import { Grid2, Stack } from "@mui/material";
 
 function Address() {
   return (
-    <Stack gap={2}>
-      <TextField type="text" label="Address" name="address" />
-      <TextField type="text" label="Landmark" name="landmark" />
-    </Stack>
+    <>
+      <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+        <TextField type="text" label="Address" name="address" />
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+        <TextField type="text" label="Landmark" name="landmark" />
+      </Grid2>
+    </>
   );
 }
 

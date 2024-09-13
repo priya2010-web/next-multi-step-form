@@ -1,18 +1,27 @@
 "use client";
+import { HIGHEST_QUALIFICATIONS } from "@/app/lib/schemas/constants";
+import { highestQualification } from "@/app/lib/schemas/signup-schema";
+import Select from "@/components/Select";
 import TextField from "@/components/TextField";
-import { Stack } from "@mui/material";
+import { Grid2, Stack } from "@mui/material";
 
 function Education() {
   return (
-    <Stack gap={2}>
-      <TextField
-        type="text"
-        label="Highest Qualification"
-        name="highestQualification"
-      />
-      <TextField type="number" label="CGPA" name="cgpa" />
-      <TextField type="text" label="College" name="college" />
-    </Stack>
+    <>
+      <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+        <Select
+          options={[...HIGHEST_QUALIFICATIONS]}
+          label="Highest Qualification"
+          name="highestQualification"
+        />
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+        <TextField type="number" label="CGPA" name="cgpa" />
+      </Grid2>
+      <Grid2 size={{ xs: 12, sm: 6, md: 4 }}>
+        <TextField type="text" label="College" name="college" />
+      </Grid2>
+    </>
   );
 }
 export default Education;
