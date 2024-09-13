@@ -1,6 +1,6 @@
 "use client";
 import TextField from "@/components/TextField";
-import { Grid2, Stack } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
 function BasicDetails() {
   return (

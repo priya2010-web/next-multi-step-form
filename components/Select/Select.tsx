@@ -1,6 +1,6 @@
 import { TextField as MuiTextField } from "@mui/material";
-import { FormControl, InputLabel, MenuItem } from "@mui/material";
-import { Controller, useFormContext } from "react-hook-form";
+import { MenuItem } from "@mui/material";
+import { useFormContext } from "react-hook-form";
 
 export default function Select({
   options,

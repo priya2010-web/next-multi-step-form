@@ -1,9 +1,8 @@
 "use client";
 import { HIGHEST_QUALIFICATIONS } from "@/app/lib/schemas/constants";
-import { highestQualification } from "@/app/lib/schemas/signup-schema";
 import Select from "@/components/Select";
 import TextField from "@/components/TextField";
-import { Grid2, Stack } from "@mui/material";
+import { Grid2 } from "@mui/material";
 
 function Education() {
   return (
